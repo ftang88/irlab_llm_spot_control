@@ -1,0 +1,53 @@
+/arm_joint_commands
+Publish to this topic to command the joint angles of the arm. The type of the message is sensor_msgs/msg/JointState. It should contain the names [arm_sh0, arm_sh1, arm_el0, arm_el1, arm_wr0, arm_wr1, arm_f1x] and desired positions for each element. (Velocity and effort components of the joint state message are not used!)
+
+/body_pose
+Publish to this topic to command the robot's body to move to a desired pose relative to the nominal standing pose without moving its feet. Only the z component of the position component is used. The orientation component will attempt to twist the body.
+
+/cmd_vel
+Publish to this topic to command the robot to walk at a given velocity. Only the x and y components of the linear twist are used, and only the z component of the angular twist is used.
+
+/manipulation_state
+Reports on if the gripper is open/closed, if the arm is stowed/unstowed, if the arm is carrying anything, and the velocity of the end effector in different frames.
+
+/odometry
+Gives the position and velocity of the robot in either the odom or vision frame
+
+/odometry/twist
+Gives the velocity of the robot in either the odom or vision frame
+
+/status/battery_states
+Reports the status of the battery, including current charge.
+
+/status/behavior_faults
+Reports on a list of faults that the robot is currently experiencing. (Ideally this list is empty).
+
+/status/end_effector_force
+Reports on the estimated force at the end effector
+
+/status/estop
+Reports on the estops that are currently active on the robot.
+
+/status/feedback
+Reports on whether the robot is sitting, standing, or moving.
+
+/status/feet
+Reports on the location of each foot with respect to the body frame, as well as if each foot is in contact with the floor.
+
+/status/leases
+Reports on the status of each lease on the robot, including who owns them.
+
+/status/metrics
+Reports on how long the robot has been on and how far it has traveled since then.
+
+/status/mobility_params
+Reports on current mobility parameters for the robot -- including if it is in stair mode, and what kind of gait is set.
+
+/status/power_states
+Indicates what kind of power state the motors are in (powered, powering on/off, etc)
+
+/status/system_faults
+Reports on if there are any active system faults on the robot
+
+/status/wifi
+Reports on the wifi connection of the robot
