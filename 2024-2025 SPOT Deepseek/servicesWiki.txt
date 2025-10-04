@@ -1,0 +1,107 @@
+/arm_carry
+Trigger service to move the arm to the "carry" position
+
+/arm_stow
+Trigger service to stow the arm
+
+/arm_unstow
+Trigger service to unstow the arm to the "ready" position
+
+/claim
+Trigger service to claim the robot to claim the robot (for example, will take control from the tablet)
+
+/clear_behavior_fault
+Clear a behavior fault on the robot. The request requires the ID of the behavior fault which can be determined via the /status/behavior_faults topic.
+
+/close_gripper
+Trigger service to close the claw gripper
+
+/dock
+Dock the robot. The service requires the dock_id which is a number printed on the fiducial at the dock.
+
+/estop/gentle
+E-stop the robot gently -- attempting to sit down first before powering the motors off
+
+/estop/hard
+E-stop the robot by immediately cutting all power
+
+/estop/release
+Release the E-stop so that the robot can be operated again
+
+/get_gripper_camera_parameters
+Get various parameters of the camera in the gripper (resolution, image size, brightness, etc).
+
+/get_inverse_kinematic_solutions
+Query the robot for inverse kinematics solutions. Example on how this service works here with documentation here.
+
+/graph_nav_clear_graph
+Clear graph nav graph
+
+/graph_nav_get_localization_pose
+Get the pose according to graph nav localization
+
+/graph_nav_set_localization
+Set the graph nav localization method (fiducial or waypoint)
+
+/graph_nav_upload_graph
+Upload a graph nav graph
+
+/list_graph
+List graph nav waypoint IDs
+
+/list_world_objects
+Lists the current world objects that Spot is keeping track of
+
+/locomotion_mode
+Set the gait of the robot to one of the following Locomotion Modes.
+
+/max_velocity
+Modifies the mobility parameters to limit the maximum velocity that the robot can move during motion commands (this affects trajectory commands)
+
+/open_gripper
+Trigger to open the gripper
+
+/override_grasp_or_carry
+Service to force Spot to override the grasp or carry state of the gripper/arm
+
+/power_off
+Trigger service to power the motors off
+
+/power_on
+Trigger service to power the motors on
+
+/release
+Trigger to return the lease on the body
+
+/robot_command
+This is the same request interface as the robot command action, but implemented as a service. It can be useful if you don't care about the feedback the action provides and just want to send the command as quickly as possible.
+
+/rollover
+Trigger service to roll the robot over so that the battery can be removed from underneath it
+
+/self_right
+Trigger service to self right the robot
+
+/set_gripper_camera_parameters
+Set various parameters of the camera in the gripper (resolution, image size, brightness, etc).
+
+/sit
+Trigger service to make the robot sit down
+
+/spot_check
+Trigger to run the spot check service
+
+/stair_mode
+Set a boolean to indicate if the robot should be in stair mode
+
+/stand
+Trigger service to make the robot stand up
+
+/stop
+Trigger service to make the robot stop executing a command
+
+/take_lease
+Trigger service to take the lease of the robot
+
+/undock
+Trigger service to undock the robot
